@@ -20,10 +20,13 @@
     UILocalNotification *noti = [[UILocalNotification alloc] init];
     noti.alertBody = @"노티테스트";
     noti.alertAction = @"확인";
-    
+    noti.userInfo = @{@"now": @"test"};
     // 알림창은 안나타나지만 AppDelegate의 메소드는 실행된다.
     [[UIApplication sharedApplication] presentLocalNotificationNow:noti];
-
+    // 백그라운드 실행중일때
+    // 오디오를 재생 중에
+    // 위치를 추적 중에
+    // 백그라운드에서 데이터를 받는 경우
 }
 - (IBAction)fireNotiIn7:(id)sender {
     UILocalNotification *noti = [[UILocalNotification alloc]init];
