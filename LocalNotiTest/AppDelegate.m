@@ -10,6 +10,10 @@
 
 @implementation AppDelegate
 
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    NSLog(@"user info : %@", notification.userInfo);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
